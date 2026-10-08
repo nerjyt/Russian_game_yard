@@ -1,0 +1,62 @@
+ТЕКСТУРЫ ДЛЯ «ДВОРА»
+====================
+
+Игра сама подхватит файлы из этой папки. Ничего в коде менять не надо.
+Нет файла — рисуется процедурная текстура, как сейчас. Есть — берётся твоя.
+
+ГДЕ БРАТЬ (обе лицензии CC0: коммерция разрешена, указывать автора не обязательно)
+  ambientCG   https://ambientcg.com
+  Poly Haven  https://polyhaven.com
+
+Качай 2K, формат PNG или JPG. 4K не нужен — сожрёт память без разницы в картинке.
+
+ИМЕНА ФАЙЛОВ — СТРОГО ТАКИЕ
+---------------------------
+Для каждой поверхности нужен хотя бы <имя>_color.
+Если есть карта нормалей — клади <имя>_normal, картинка станет объёмной.
+
+  panel_a_color.png      панельный фасад, светлый    (ambientCG: Concrete, Plaster)
+  panel_a_normal.png
+  panel_b_color.png      панельный фасад, серый
+  panel_b_normal.png
+  panel_end_color.png    торцевая стена без окон
+  panel_end_normal.png
+  concrete_color.png     бетон светлый: бордюры, ступени
+  concrete_normal.png
+  concrete_d_color.png   бетон тёмный: цоколь, гаражи
+  concrete_d_normal.png
+  asphalt_color.png      дорога и дорожки              (ambientCG: Asphalt)
+  asphalt_normal.png
+  grass_color.png        газон                         (ambientCG: Grass, Ground)
+  grass_normal.png
+  dirt_color.png         утоптанная земля              (ambientCG: Ground)
+  dirt_normal.png
+  brick_color.png        кирпич: опорный пункт         (ambientCG: Bricks)
+  brick_normal.png
+  garage_color.png       гофрированные ворота          (ambientCG: Metal, Corrugated)
+  garage_normal.png
+  garage_2_color.png     вторые ворота, другой цвет
+  garage_2_normal.png
+  rust_color.png         ржавый металл: баки, двери    (ambientCG: Metal Rust)
+  rust_normal.png
+  wood_color.png         доски: лавки, беседка         (ambientCG: Wood Planks)
+  wood_normal.png
+  wood_blue_color.png    крашеный забор
+  wood_blue_normal.png
+  foliage_color.png      листва деревьев и кустов
+  glass_color.png        стекло окон
+  kiosk_color.png        крашеный металл ларька
+
+Можно класть не всё сразу. Начни с четырёх — они занимают больше всего экрана:
+  panel_a, panel_b, asphalt, grass
+
+КАК ПРОВЕРИТЬ
+-------------
+Положил файлы → Unity сам их импортирует → Play.
+В консоли появятся строки вида:
+  [Двор] Материал «asphalt» взят из файла (с картой нормалей)
+Если строки нет — не совпало имя файла. Проверь: всё маленькими буквами,
+без пробелов, окончание ровно _color или _normal.
+
+Настройки импорта проставляются сами: карты нормалей помечаются как NormalMap,
+повтор, анизотропия, мипмапы. Руками ничего выставлять не нужно.

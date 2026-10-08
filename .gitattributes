@@ -1,0 +1,25 @@
+# Пусть git сам разбирается с переводами строк в тексте
+* text=auto
+
+# Ассеты Unity — текст, но сливать их вручную нельзя
+*.cs      text diff=csharp
+*.unity   text merge=unityyamlmerge eol=lf
+*.prefab  text merge=unityyamlmerge eol=lf
+*.asset   text merge=unityyamlmerge eol=lf
+*.meta    text merge=unityyamlmerge eol=lf
+*.mat     text merge=unityyamlmerge eol=lf
+*.anim    text merge=unityyamlmerge eol=lf
+*.controller text merge=unityyamlmerge eol=lf
+
+# Двоичные файлы
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.tga  binary
+*.psd  binary
+*.fbx  binary
+*.wav  binary
+*.ogg  binary
+*.mp3  binary
+*.dll  binary
+*.unitypackage binary
